@@ -2,6 +2,8 @@
 
     <div fxLayout="row" fxLayoutAlign="space-around">
         <div>
+          <!-- Afegim el nom del jugado gaurdat a la variable-->
+          <h1>Jugador: {{this.nomJugador}}</h1>
             <h3>Points: {{ score }}</h3>
         </div>
 
@@ -14,7 +16,7 @@
         <div>
             <h2>Who is that Pokemon?...</h2>
         </div>
-    
+
         <div>
             <app-pokemon-view [url]="urlImage"
                               [show]="selected"
@@ -38,14 +40,14 @@
                 </li>
             </ul>
         </div>
-    
+
         <!-- <div>
             <h3>Points: {{ points }}</h3>
         </div>
         <div>
             <img *ngFor="let heart of hearts" class="heart" src="assets/heart.png">
         </div> -->
-    
+
         <div *ngIf="selected">
             <button mat-raised-button
                     color="primary"
@@ -54,7 +56,7 @@
             </button>
         </div>
     </div>
-    
+
 </ng-container>
 
 <ng-template #Loading>

@@ -1,0 +1,14 @@
+<div fxLayout="column"
+     fxLayoutAlign="space-between center">
+  <div>
+    <h1>Pokemon Game</h1>
+    <!-- Aqui fem que quan fem submit a Play fagi la funcio del ts inicia() -->
+  </div>
+  <form (submit)="iniciar()" ngNativeValidate>
+    <label for="jugador"><b>JUGADOR: </b></label>
+    <input [(ngModel)]="jugadr" [ngModelOptions]="{standalone: true}" type="text" id="jugador" placeholder="Jugador" required/>
+    <button type="submit" mat-raised-button color="primary">JUGAR</button>
+  </form>
+</div>
+<footer>
+</footer>

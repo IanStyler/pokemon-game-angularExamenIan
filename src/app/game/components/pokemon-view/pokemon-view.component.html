@@ -1,4 +1,9 @@
-<img [src]="url"
+<style>
+  .canviBorde{
+    border: 2px solid yellow;
+  }
+</style>
+<img  #canviarFons (click)="canviarBorde()" [src]="url"
      draggable="false"
      [class.show]="show"
      [style.width.px]="width"

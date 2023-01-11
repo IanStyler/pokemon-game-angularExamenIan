@@ -9,6 +9,8 @@ export class PlayerService {
   private _score: number = 0;
   private _lifes: number = 0;
   private _highScore: number = 0;
+  //Declarrem la vairiable en el servei
+  public jugadr = 'null' as String;
 
   get score(): number {
     return this._score;
@@ -34,7 +36,7 @@ export class PlayerService {
     this._score = 0;
     this._lifes = 5;
   }
-  
+
   increasePoints() {
     this._score += 10;
   }
@@ -42,7 +44,7 @@ export class PlayerService {
   decreaseLifes() {
     this._lifes -= 1;
     if (this._lifes <= 0) {
-      
+
       if (this._score > this._highScore) this.newHighScore()
 
       this._router.navigate(['/game/gameover']);
